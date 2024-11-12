@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas para Secundaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Colores principales */
+        :root {
+            --primary-color: #005b96; /* Azul oscuro */
+            --secondary-color: #009dc4; /* Azul claro */
+            --background-color: #f4f4f9;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --text-light: #ffffff;
+            --footer-background: #333;
+            --hover-color: #00bcd4; /* Azul más brillante para hover */
+        }
+        
+        /* Estilo general */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--hover-color);
+        }
+
+        /* Contenedor */
+        .container {
+            padding: 2rem 10%;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        /* Temas de matemáticas */
+        .topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .topic {
+            background-color: var(--card-background);
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: calc(50% - 20px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .topic:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--secondary-color);
+        }
+
+        .topic h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .topic p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--footer-background);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+
+        /* Responsividad */
+        @media screen and (max-width: 768px) {
+            .topics {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .topic {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .container {
+                padding: 2rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Matemáticas para Secundaria</h1>
+        <nav>
+            <ul>
+                <li><a href="#algebra">Álgebra</a></li>
+                <li><a href="#geometria">Geometría</a></li>
+                <li><a href="#trigonometria">Trigonometría</a></li>
+                <li><a href="#estadistica">Estadística</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="intro">
+            <h2>Bienvenido a la página de Matemáticas para Secundaria</h2>
+            <p>Este sitio está diseñado para ayudarte a entender y dominar los conceptos de matemáticas en el nivel de secundaria. Aquí encontrarás recursos, ejercicios y explicaciones para temas clave en álgebra, geometría, trigonometría y estadística.</p>
+        </section>
+
+        <section id="topics">
+            <h2>Temas de Matemáticas</h2>
+            <div class="topics">
+                <div class="topic" id="algebra">
+                    <a href="algebra.html"><h3>Álgebra</h3></a>
+                    <p>Explora conceptos como ecuaciones lineales, polinomios, factorización y sistemas de ecuaciones.</p>
+                </div>
+                <div class="topic" id="geometria">
+                    <a href="geometria.html"><h3>Geometría</h3></a>
+                    <p>Aprende sobre figuras geométricas, ángulos, perímetros, áreas y volúmenes.</p>
+                </div>
+                <div class="topic" id="trigonometria">
+                    <a href="trigonometria.html"><h3>Trigonometría</h3></a>
+                    <p>Descubre las relaciones entre ángulos y lados en triángulos, y conceptos como seno, coseno y tangente.</p>
+                </div>
+                <div class="topic" id="estadistica">
+                    <a href="estadistica.html"><h3>Estadística</h3></a>
+                    <p>Entiende los fundamentos de probabilidad, distribución de datos y análisis estadístico.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Matemáticas para Secundaria. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
